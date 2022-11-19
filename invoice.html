@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+                 initial-scale=1, 
+                 shrink-to-fit=no">
+  <title>
+    Invoices
+  </title>
+  <h1> Invoices </h1>
+
+  <!-- Include Bootstrap for styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Include the Bootstrap Table
+  CSS for the table -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+</head>
+<style>
+ 
+  .tablediv {
+    max-width: 100% !important;
+  }
+
+  th {
+    text-align: inherit;
+    color: rgb(0, 0, 0);
+    background-color: rgb(226, 220, 220) !important;
+    border-color: rgb(0, 0, 0) !important;
+  }
+
+  td {
+    color: rgba(0, 0, 0, 0.911);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0) !important;
+  }
+
+  body .video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    /* background-color: rgb(246,246,246); */
+  }
+  h1 {
+    text-align: center;
+  }
+
+  h1:hover {
+    color: rgb(124,1,1);
+  }
+  th:hover {
+    color: rgb(124,1,1);
+  }
+  .container {
+    max-width: 2000px;
+}
+
+</style>
+
+<body>
+  <form>
+    <input type="button" value="🡸" onclick="history.back()" style="
+    background-color: rgb(226, 220, 220);
+    margin-left: 15px;
+    margin-bottom: 15px;">
+  </form>
+
+
+  <div class="video">
+    <img src="\bg-body.jpg">
+
+      </img>
+ 
+
+  </div>
+  <div class="tablediv">
+    <div class="container">
+      <table class="table-striped border-success">
+        <thead>
+          <tr>
+            <th data-field="Doc Number">
+
+              Doc Number
+
+            </th>
+            <th data-field="Posting Date">
+
+              Posting Date
+
+            </th>
+            <th data-field="Due Date">
+
+              Due Date
+
+            </th>
+            <th data-field="TRX Type">
+
+              TRX Type
+
+            </th>
+            <th data-field="LPO / REF Number">
+
+              LPO / REF Number
+
+            </th>
+            <th data-field="D N Number">
+
+              D N Number
+
+            </th>
+            <th data-field="Debit">
+
+              Debit
+
+            </th>
+            <th data-field="Credit">
+
+              Credit
+
+            </th>
+            <th data-field="Open amount">
+
+              Open amount
+
+            </th>
+            <th data-field="Cumalative Balance">
+
+              Cumalative Balance
+
+            </th>
+            <th data-field="Due Days">
+
+              Due Days
+
+            </th>
+            <th data-field=" Over Due Days">
+
+              Over Due Days
+
+            </th>
+            <th data-field="PDC Amount">
+
+              PDC Amount
+
+            </th>
+            <th data-field="PDC Maturity Days">
+
+              PDC Maturity Days
+
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+
+  <!-- Include the JavaScript file for Bootstrap table -->
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+  </script>
+
+  <!-- Include the file where the JSON data is stored -->
+  <script type="text/javascript" src="invoice.js">
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      // Use the given data to create 
+      // the table and display it
+      $('table').bootstrapTable({
+        data: mydata
+      });
+    });
+
+    // Parse the imported data as JSON
+    // and store it`
+    var mydata = JSON.parse(da)
+  </script>
+</body>
+
+</html>

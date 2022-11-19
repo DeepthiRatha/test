@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" 
+        content="width=device-width, 
+                 initial-scale=1, 
+                 shrink-to-fit=no">
+  <title>
+ Post dated Cheques
+  </title>
+  
+  <!-- Include Bootstrap for styling -->
+  <link rel="stylesheet" 
+        href=
+"style1.css">
+  
+<!-- <link rel="stylesheet" href="style.css">   -->
+  <link rel="stylesheet"
+        href=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+</head>
+<body>
+  <div class="container">
+      <table class="table-striped border-success">
+        <thead>
+          <tr>
+            <th data-field="number">
+              <span class="text-success">
+                Payment Number
+              </span>
+            </th>
+            <th data-field="date">
+              <span class="text-success">
+                Cheque Received Date 
+              </span>
+            </th>
+            <th data-field="number1">
+                <span class="text-success">
+                  Cheque Number
+                </span>
+            </th>
+            <th data-field="date">
+                <span class="text-success">
+                    Cheque Date 
+                </span>
+            </th>
+            <th data-field="name">
+                <span class="text-success">
+                  Customer Bank Name 
+                </span>
+            </th>
+            <th data-field="remarks">
+                <span class="text-success">
+                  Remarks
+                </span>
+            </th>
+            <th data-field="amount">
+                <span class="text-success">
+                  Cheque Amount 
+                </span>
+            </th>
+            
+          </tr>
+        </thead>
+      </table>
+  </div>
+  
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src=
+"https://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+  
+  <!-- Include the JavaScript file for Bootstrap table -->
+  <script src=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+  </script>
+  
+  <!-- Include the file where the JSON data is stored -->
+  <script type="text/javascript" 
+          src="pdc.js">
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+  
+      // Use the given data to create 
+      // the table and display it
+      $('table').bootstrapTable({
+        data: mydata
+      });
+    });
+  
+    // Parse the imported data as JSON
+    // and store it`
+    var mydata = JSON.parse(da)
+  </script>
+</body>
+</html>

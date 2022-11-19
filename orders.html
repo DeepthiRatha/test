@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, 
+                 initial-scale=1, 
+                 shrink-to-fit=no">
+  <title>
+    Order Details
+  </title>
+  <h1> Orders Details </h1>
+  <!-- Include Bootstrap for styling -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- <link rel="stylesheet" href="style.css">   -->
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+</head>
+<style>
+ 
+  .container {
+    max-width: 2000px;
+}
+  th {
+    text-align: inherit;
+    color: rgb(0, 0, 0);
+    background-color: rgb(226, 220, 220) !important;
+    border-color: rgb(0, 0, 0) !important;
+  }
+
+  td {
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0) !important;
+  }
+
+  table {
+    width: 100%;
+
+  }
+
+  body .video {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+    /* background-color: rgb(246, 246, 246); */
+  }
+
+  
+
+  .tablediv {
+    max-width: 100% !important;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  h1:hover {
+    color: rgb(124,1,1);
+  }
+  th:hover {
+    color: rgb(124,1,1);
+  }
+</style>
+
+<body>
+  <form>
+    <input type="button" value="🡸" onclick="history.back()" style="
+    background-color: rgb(226, 220, 220);
+    margin-left: 15px;
+    margin-bottom: 20px;">
+  </form>
+
+
+  <div class="video">
+    
+    <img src="\bg-body.jpg">
+      </img>
+ 
+
+  </div>
+  <div class="tablediv">
+    <div class="container">
+      <table class="table-striped border-success">
+        <thead>
+          <tr>
+            <section id="th">
+              <!-- <th data-field="Sales Employee Name">
+
+                Sales Employee Name
+
+            </section>
+            </th> -->
+            <th data-field="Document Number">
+
+              Document Number
+
+            </th>
+            <th data-field="Posting Date">
+
+              Posting Date
+
+            </th>
+            <th data-field="BP Reference No.">
+
+              BP Reference No.
+
+            </th>
+            <th data-field="SAP Code">
+
+              SAP Code
+
+            </th>
+            <th data-field="SAP Name">
+
+              SAP Name
+
+            </th>
+            <th data-field="UOM">
+
+              UOM
+
+            </th>
+            <!-- <th data-field="Wt/PC(Kg)">
+
+              Wt/PC(Kg)
+
+            </th> -->
+            <th data-field="Price after Discount">
+
+              Price after Discount
+
+            </th>
+            <th data-field="Due Date">
+
+              Due Date
+
+            </th>
+            <th data-field="Ordered Qty">
+
+              Ordered Qty
+
+            </th>
+            <th data-field="Delivered">
+
+              Delivered
+
+            </th>
+            <th data-field="Pending">
+
+              Pending
+
+            </th>
+            <th data-field="Row Total">
+
+              Row Total
+
+            </th>
+            <th data-field="Status">
+
+              Status
+
+            </th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+
+  <!-- Include the JavaScript file for Bootstrap table -->
+  <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+  </script>
+
+  <!-- Include the file where the JSON data is stored -->
+  <script type="text/javascript" src="orders.js">
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+
+      // Use the given data to create 
+      // the table and display it
+      $('table').bootstrapTable({
+        data: mydata
+      });
+    });
+
+    // Parse the imported data as JSON
+    // and store it`
+    var mydata = JSON.parse(da)
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" 
+        content="width=device-width, 
+                 initial-scale=1, 
+                 shrink-to-fit=no">
+  <title>
+    load data from json file
+    into a bootstrap table
+  </title>
+  
+  <!-- Include Bootstrap for styling -->
+  <link rel="stylesheet" 
+        href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+  <!-- Include the Bootstrap Table
+  CSS for the table -->
+  <link rel="stylesheet"
+        href=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css">
+</head>
+<body>
+  <div class="container">
+      <table class="table-striped border-success">
+        <thead>
+          <tr>
+            <th data-field="Doc Number">
+                <span class="text-success">
+                  Doc Number
+                </span>
+            </th>
+            <th data-field="Posting Date">
+                <span class="text-success">
+                  Posting Date 
+                </span>
+            </th>
+            <th data-field="Due Date">
+                <span class="text-success">
+                  Due Date
+                </span>
+            </th>
+            <th data-field="TRX Type">
+                <span class="text-success">
+                    TRX Type 
+                </span>
+            </th>
+            <th data-field="LPO / REF Number">
+                <span class="text-success">
+                  LPO / REF Number
+                </span>
+            </th>
+            <th data-field="D N Number">
+                <span class="text-success">
+                  D N Number
+                </span>
+            </th>
+            <th data-field="Debit">
+                <span class="text-success">
+                  Debit 
+                </span>
+            </th>
+            <th data-field="Credit">
+                <span class="text-success">
+                  Credit 
+                </span>
+            </th>
+            <th data-field="Open amount">
+                <span class="text-success">
+                 Open amount 
+                </span>
+            </th>
+            <th data-field="Cumalative Balance">
+                <span class="text-success">
+                  Cumalative Balance 
+                </span>
+            </th>
+            <th data-field="Due Days">
+                <span class="text-success">
+                  Due Days
+                </span> 
+            </th>
+            <th data-field=" Over Due Days">
+                <span class="text-success">
+                  Over Due Days 
+                </span>
+            </th> 
+          </tr>
+        </thead>
+      </table>
+  </div>
+  
+  <!-- Include jQuery and other required files for Bootstrap -->
+  <script src=
+"https://code.jquery.com/jquery-3.3.1.min.js">
+  </script>
+  <script src=
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+  </script>
+  <script src=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+  </script>
+  
+  <!-- Include the JavaScript file for Bootstrap table -->
+  <script src=
+"https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js">
+  </script>
+  
+  <!-- Include the file where the JSON data is stored -->
+  <script type="text/javascript" 
+          src="test1.js">
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+  
+      // Use the given data to create 
+      // the table and display it
+      $('table').bootstrapTable({
+        data: mydata
+      });
+    });
+  
+    // Parse the imported data as JSON
+    // and store it`
+    var mydata = JSON.parse(da)
+  </script>
+</body>
+</html>
