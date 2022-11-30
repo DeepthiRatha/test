@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* body {
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+      /* .mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #555;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+} */
+      @media screen and (max-width: 900px) {
+        .topnav {
+          height: 400px;
+          overflow: hidden;
+          /* background-color: #333; */
+          position: relative;
+        }
+
+        .topnav #myLinks {
+            height: 400px;
+    overflow: hidden;
+    background-color: #acacac;
+    position: relative;
+        }
+
+        .topnav a {
+          color: #fcf9f9;
+          padding: 14px 16px;
+          text-decoration: none;
+          /* font-size: 17px; */
+          display: block;
+        }
+
+        .topnav a.icon {
+          background: #b0494c;
+          display: block;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+
+        .topnav a:hover {
+          background-color: #ddd;
+          color: #b0494c;
+        }
+      }
+
+      @media screen and (min-width: 1000px) {
+        .topnav {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Simulate a smartphone / tablet -->
+    <div class="mobile-container">
+      <!-- Top Navigation Menu -->
+      <div class="topnav">
+        <a href="#home" class="active"></a>
+        <div id="myLinks">
+          <a href="index.html" class="active">Home</a>
+
+          <a href="about.html">About Us</a>
+
+          <a href="profile.html">Group Profile</a>
+
+          <a href="policy.html">Quality Policy</a>
+
+          <a href="sectors.html">Sectors</a>
+
+          <a href="sales-network.html">Sales Network</a>
+
+          <a href="downloads.html">Downloads</a>
+
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+
+      <!-- End smartphone / tablet look -->
+    </div>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myLinks");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>

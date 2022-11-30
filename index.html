@@ -1,386 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dss Portal</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>DSS</title>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0">
+
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
+
+
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+
+	<link rel="stylesheet" href="slider/dist/css/unslider.css">
+	<link rel="stylesheet" href="slider/dist/css/unslider-dots.css">
+
 </head>
+
 <style>
-    input::placeholder {
-        color: rgb(255, 255, 255) !important;
-    }
-
-    text {
-        color: black;
-    }
-
-    .card {
-        height: 257px;
-        justify-content: center;
-    }
-
-
-
-    a {
-        text-decoration: none;
-    }
-
-    .div1 {
-        background-color: rgb(255, 255, 255);
-        color: rgb(0, 0, 0);
-        font-size: 10px;
-        border-radius: 20px;
-        border: 1px;
-        border-style: solid;
-        width: 100%;
-        height: 200px;
-        margin-right: 10px;
-        margin-top: 20%;
-        text-align: center;
-        padding-top: 20%;
-        padding-left: 10px;
-    }
-
-    .dashboard {
-        background-color: rgb(255, 255, 255);
-    }
-
-    .menu {
-        background-color: rgb(136, 137, 138);
-
-    }
-
-    .topbar {
-        background-color: rgb(136, 137, 138);
-    }
-
-    .side {
-        background-color: rgb(255, 255, 255);
-        color: rgb(124, 1, 1);
-        color: rgb(0, 0, 0);
-
-    }
-    .content:hover {
-
-
-
-color: rgb(124, 1, 1)
-
-}
-
-
-
-#subtxt:hover {
-
-
-
-color: rgb(124, 1, 1)
-
-}
-    .side:hover {
-        color: rgb(124, 1, 1);
-
-    }
-
-    #subtxt {
-        color: rgb(0, 0, 0);
-    }
-
-    body {
-        background-color: none !important;
-    }
-
-    body .video {
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 200%;
-        overflow: hidden;
-        z-index: -1;
-        /* background-color: rgb(246, 246, 246); */
-    }
-
-    .card.weather {
-        background-color: rgb(255, 255, 255);
-        font-weight: bold;
-        border-radius: 20px;
-        border: 1px;
-        border-style: solid;
-    }
-
-    .card {
-        background-color: rgb(255, 255, 255);
-        font-weight: bold;
-        border-radius: 20px;
-        border: 1px;
-        border-style: solid;
-    }
-
-    a.menu-item {
-        text-decoration-color: rgb(255, 255, 255);
-    }
-
-    .menu-item {
-        color: rgb(0, 0, 0);
-        font-weight: 150;
-    }
-
-    .menu-item:hover {
-        color: rgb(124, 1, 1);
-        font-weight: 150;
-    }
-
-    a .div1:hover {
-
-        color: rgb(124, 1, 1)
-    }
-
-    a #subtxt:hover {
-        color: rgb(124, 1, 1)
-    }
-</style>
+ 
+    </style>
 
 <body>
-    <main class="container">
-        <div class="menu">
-            <div class="avatar">
-                <img class="thumb" src="\Dss.png" width="60" />
-                <span class="name" style="color:rgb(124, 1, 1);">DSS Steel</span>
-            </div>
-            <nav class="primary">
-                <a href="#" class="menu-item active">
-                    <span class="iconoir-report-columns"></span>
-                    <span class="desc">Dashboard</span>
-                </a>
-                <a href="orders.html" class="menu-item">
-                    <span class="iconoir-google-docs"></span>
-                    <span class="desc">Order Details</span>
-                </a>
-                <a href="statement.html" class="menu-item">
-                    <span class="iconoir-table"></span>
-                    <span class="desc">Statement</span>
-                </a>
-                <a href="invoice.html" class="menu-item">
-                    <span class="iconoir-bag"></span>
-                    <span class="desc">Invoice</span>
-                </a>
-
-                <a href="certificates.html" class="menu-item">
-                    <span class="iconoir-leaderboard"></span>
-                    <span class="desc">MTC</span>
-                </a>
-                <a href="pdc.html" class="menu-item">
-                    <span class="iconoir-settings"></span>
-                    <span class="desc">Post Dated Cheques</span>
-                </a>
-            </nav>
-            <span class="expander iconoir-arrow-right"></span>
-        </div>
-        <div class="topbar">
-            <h1 class="current" style="color:rgb(124, 1, 1);">Dashboard</h1>
-            <span class="search">
-                <label><span class="iconoir-search"></span></label>
-                <input class="bar" type="text" placeholder="Search..." />
-            </span>
-            <!-- <nav>
-                <a href="#" class="menu-item">Orders</a>
-                <a href="#" class="menu-item">Sections</a>
-                <a href="#" class="menu-item">Products</a>
-            </nav> -->
-        </div>
-        <div class="dashboard">
-            <div class="cardcolumn">
-                <a href="invoice.html">
-                    <div class="div1">
-                        <header>
-                            <!-- <a class="title" href="#"></a> -->
-                            <span class="iconoir-more-vert"></span>
-                        </header>
-                        <div class="content"></div>
-
-                        <h1>OI</h1>
-
-                        <center>
-                            <div id="subtxt">
-                                <h1>145000</h1>
-                            </div>
-                        </center>
-
-                        <div class="meta">
-                            <span class="iconoir-pin"></span>
-                            <span class="iconoir-eye-off"></span>
-                            <span class="iconoir-share-ios"></span>
-                        </div>
-                    </div>
-                </a>
-
-                <div class="div1">
-                    <header>
-                        <a class="title" href="#"></a>
-                        <span class="iconoir-more-vert"></span>
-                    </header>
-                    <div class="content">
-                        <h1>Post dated Cheques Due next week </h1>
-                        <div id="subtxt">
-                            <center>
-                                <h1>10000</h1>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="meta">
-                        <span class="iconoir-pin"></span>
-                        <span class="iconoir-eye-off"></span>
-                        <span class="iconoir-share-ios"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="cardcolumn">
-                <a href="pdc.html">
-                    <div class="div1">
-                        <header>
-                            <!-- <a class="title" href="pdc.html"> -->
-                            <span class="iconoir-more-vert"></span>
-                        </header>
-                        <div class="content"></div>
-                        <center>
-                            <h1>Post Dated Cheques</h1>
-                        </center>
-                        <div id="subtxt">
-                            <center>
-                                <h1>34500</h1>
-                            </center>
-                        </div>
-                        <div class="meta">
-                            <span class="iconoir-pin"></span>
-                            <span class="iconoir-eye-off"></span>
-                            <span class="iconoir-share-ios"></span>
-                        </div>
-                    </div>
-                </a>
-                <a href="orders.html">
-                    <div class="div1">
-                        <header>
-                            <!-- <a class="title" href="#"></a> -->
-                            <span class="iconoir-more-vert"></span>
-                        </header>
-                        <div class="content"></div>
-                        <center>
-                            <h1>Orders to Receive</h1>
-                        </center>
-                        <div id="subtxt">
-                            <center>
-                                <h1>25 MT</h1>
-                            </center>
-                        </div>
-                        <div class="meta">
-                            <span class="iconoir-pin"></span>
-                            <span class="iconoir-eye-off"></span>
-                            <span class="iconoir-share-ios"></span>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="cardcolumn">
-                <div class="div1">
-                    <header>
-                        <a class="title" href="#"></a>
-
-                        <span class="iconoir-more-vert"></span>
-                    </header>
-                    <div class="content">
-                        <h1>Available Credit limit</h1>
-                        <div id="subtxt">
-                            <center>
-                                <h1>12000</h1>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="meta">
-                        <span class="iconoir-pin"></span>
-                        <span class="iconoir-eye-off"></span>
-                        <span class="iconoir-share-ios"></span>
-                    </div>
-                </div>
-                <div class="div1">
-                    <header>
-                        <a class="title" href="#"></a>
-                        <span class="iconoir-more-vert"></span>
-                    </header>
-                    <div class="content">
-                        <center>
-                            <h1>Material Out of Delivery</h1>
-                        </center>
-                        <div id="subtxt">
-                            <center>
-                                <h1>15 MT</h1>
-                            </center>
-                        </div>
-                    </div>
-                    <div class="meta">
-
-                        <span class="iconoir-pin"></span>
-                        <span class="iconoir-eye-off"></span>
-                        <span class="iconoir-share-ios"></span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="side">
-            <div class="card">
-                <header>Upcoming Deliveries</header>
-                <div class="content">
-                    <ul>
-                        <li> Monday 15:30 Planned delivery time</li>
-                        <li> Tuesday 18:00 Planned delivery time</li>
-                        <li> Wednesday 19:30 Planned delivery time</li>
-                        <li> Thursday 22:00 Planned delivery time</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="card weather">
-
-                <!-- <img class="condition" src="https://res.cloudinary.com/dtqkhr8o9/image/upload/v1665659679/forecast_vb4vl0.png" /> -->
-                <div class="content" style="padding-left: 50%;font-size: 20px;font-weight: 600;">
-                    Contact:<br>
-                    DSS Steel <br>
-                    +971 4 3332637<br>
-                    info@dsssteel.com<br>
-
-                </div>
-
-                <div class="meta">
-
-                    <span class="location">
-
-                        <!-- <span class="iconoir-pin-alt"></span> Athens, GR
-                    </span> -->
-                        <div class="datetime">
-
-                            <span class="iconoir-calendar"></span>
-                            <span class="date">21 July, 2022</span>
-                            <span class="time">5:01</span>
-                        </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
-    <div class="video">
-        <img src="\bg-body.jpg">
-
-        </img>
+    <div class="background">
     </div>
-</body>
-<!-- javascript -->
-<script src="main.js"></script>
-</body>
+<div id="index-header">
+	<div id="logo"><a href="index.html"><img src="images/logo.png" width="142" height="62" /></a></div>
+    <div id="nav"> 
+    	<ul>
+            <li><a href="index.html" class="active">Home</a>-</li>
+            <li><a href="about.html">About Us</a>-</li>
+            <li><a href="profile.html">Group Profile</a>-</li>
+            <li><a href="policy.html">Quality Policy</a>-</li>
+            <li><a href="sectors.html">Sectors</a>-</li>
+            <li><a href="sales-network.html">Sales Network</a>-</li>
+            <li><a href="downloads.html">Downloads</a>-</li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
+</div>
 
+
+
+<div id="index-content">
+	
+	<div id="index-product-box-cont">
+    	<div class="product-box"><a href="products/pipes/black-hot-dipped.html"><img src="images/icon-pipes.png" width="50" height="48" />Pipes &amp; Tubes</a></div>
+    	<div class="product-box"><a href="products/long/universal-beams.html"><img src="images/icon-long.png" width="50" height="48" />Long Products</a></div>
+    	<div class="product-box"><a href="products/flat/hot-rolled-steel-plate.html"><img src="images/icon-flat.png" width="50" height="48" />Flat Products</a></div>
+    	<div class="product-box"><a href="products/miscellaneous/ms-gratings.html"><img src="images/icon-miscellaneous.png" width="50" height="48" />Miscellaneous</a></div>
+    	<div class="product-box"><a href="products/dss-booklet.pdf" target="_blank"><img src="images/icon-booklet.png" width="50" height="48" />Product Booklet</a></div>
+	</div>
+    
+    <div id="index-right-box">
+    	<div class="banner-text left top-marg">
+        	<img src="images/years-img.png" width="64" height="47" class="bottom-marg top-marg3" /><br />Centre of<br />Structural<br /><span>Steel</span>
+        </div>
+
+
+
+
+
+
+
+
+    <div class="unslider" style="width:260px;">
+        <div class="automatic-slider unslider-horizontal" style="position: relative; overflow: auto;">
+            <ul class="unslider-wrap unslider-carousel">
+                <li>
+                	<img src="slider/img/galvanized-steel-pipes.png" width="260" height="289" /><br />
+	                Galvanized Steel Pipe
+                </li>
+                <li>
+                	<img src="slider/img/ms-square-hollow-sections.png" width="260" height="289" /><br />
+                    M S Square Hollow Sections
+                </li>
+                <li>
+                	<img src="slider/img/ms-rectangular-hollow-sections.png" width="260" height="289" /><br />
+                	M S Rectangular Hollow Sections
+                </li>
+                <li>
+                	<img src="slider/img/ms-beams.png" width="260" height="289" /><br />
+                	M S Beams
+                </li>
+                <li>
+                	<img src="slider/img/channels.png" width="260" height="289" /><br />
+                	M S Channels
+                </li>
+                <li>
+                	<img src="slider/img/equal-angles.png" width="260" height="289" /><br />
+                	M S Equal Angle
+                </li>
+                <li>
+                	<img src="slider/img/unequal-angles.png" width="260" height="289" /><br />
+                	M S Unequal Angles
+                </li>
+                <li>
+                	<img src="slider/img/round-bars.png" width="260" height="289" /><br />
+                	M S Round Bars
+                </li>
+                <li>
+                	<img src="slider/img/shafting-bars.png" width="260" height="289" /><br />
+                	M S Shafting Bars
+                </li>
+                <li>
+                	<img src="slider/img/ms-square-bars.png" width="260" height="289" /><br />
+                	M S Square Bars
+                </li>
+                <li>
+                	<img src="slider/img/ms-flat-bars.png" width="260" height="289" /><br />
+                	M S Flat Bars
+                </li>
+                <li>
+                	<img src="slider/img/ms-plates.png" width="260" height="289" /><br />
+                	M S Plates
+                </li>
+                <li>
+                	<img src="slider/img/ms-chequered-sheets.png" width="260" height="289" /><br />
+                	M S Chequered Sheets
+                </li>
+                <li>
+                	<img src="slider/img/ms-sheets.png" width="260" height="289" /><br />
+                	M S Sheets
+                </li>
+                <li>
+                	<img src="slider/img/aluminium-plain-sheets.png" width="260" height="289" /><br />
+                	Aluminium Plain Sheets
+                </li>
+                <li>
+                	<img src="slider/img/aluminium-chequered-sheets.png" width="260" height="289" /><br />
+                	Aluminium Chequered Sheets
+                </li>
+                <li>
+                	<img src="slider/img/aluminium-coils.png" width="260" height="289" /><br />
+                	Aluminium Coils
+                </li>
+                <li>
+                	<img src="slider/img/ms-gratings.png" width="260" height="289" /><br />
+                	M S Gratings
+                </li>
+                <li>
+                	<img src="slider/img/expanded-metal.png" width="260" height="289" /><br />
+                	Expanded Metal
+                </li>
+                
+            </ul>
+        </div>
+        <a class="unslider-arrow next"></a>
+        <a class="unslider-arrow prev"></a>
+    </div>
+    
+
+
+
+
+
+
+
+  </div>
+<div class="clear"></div>
+    
+</div>
+
+
+
+<div id="footer-wrapper">
+	
+	<div id="footer-cont">
+<!--      <a href="grades.html" class="grades-btn">Steel Grades</a>
+-->      
+        <div class="footer-right">
+            <a href="#" class="icon-marg right left-marg"><img src="images/youtube-icon.png" width="23" height="23" /></a>
+        	<a href="#" class="icon-marg right left-marg3"><img src="images/fb-icon.png" width="23" height="23" /></a>
+            <a href="https://www.linkedin.com/company/dsssteel/" class="icon-marg right left-marg3"><img src="images/linkedin-icon.png" width="23" height="23" /></a>
+            <a href="mailto:info@dsssteel.com" class="mail-link right left-marg3"><img src="images/email-icon.png" width="28" height="28" class="left right-marg f-img-marg" />info@dsssteel.com</a>
+            <a href=“tel:+97143332637”><div class="right left-marg3"><img src="images/number-icon.png" width="28" height="28" class="left right-marg f-img-marg" /></a>+971 4 3332637</div>
+            <div class="right left-marg3">DSS STEEL L. L. C</div>
+        </div>
+	
+    </div>
+
+</div>
+
+
+
+    <!-- There'll be a load of other stuff here -->
+        <script src="slider/dist/js/jquery-2.1.4.min.js"></script>
+        <script src="slider/dist/js/unslider-min.js"></script> <!-- but with the right path! -->
+        <script>$('.automatic-slider').unslider({
+        autoplay: true
+        });</script>
+
+</body>
 </html>
